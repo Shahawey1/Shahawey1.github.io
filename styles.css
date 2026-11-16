@@ -158,3 +158,43 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-portrait { opacity: 1; transform: none; }
 }
+
+
+/* Approved original portrait: final override, no fixed-height cropping */
+.hero-portrait {
+  display: block !important;
+  position: relative;
+  width: min(100%, 500px) !important;
+  height: auto !important;
+  max-width: 500px !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  align-self: end;
+  justify-self: end;
+  background: transparent !important;
+  z-index: 2;
+}
+.hero-portrait img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 680px !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  filter: drop-shadow(0 16px 24px rgba(0,0,0,.2));
+}
+@media (max-width: 800px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .hero-portrait {
+    width: min(100%, 460px) !important;
+    max-width: 460px !important;
+    justify-self: center !important;
+    align-self: center;
+  }
+  .hero-portrait img { max-height: none !important; }
+}
