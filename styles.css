@@ -496,3 +496,115 @@ body{background:var(--navy-950);color:var(--ivory);font-size:15px;line-height:1.
   }
   .hero-portrait:after{height:20%}
 }
+
+
+/* FINAL HERO CLEANUP — simplify geometry, improve hierarchy, prevent collisions */
+.site-header{
+  position:relative!important;
+  top:auto!important;
+  z-index:20;
+  min-height:86px;
+}
+html{scroll-padding-top:18px}
+
+/* Remove competing oversized background rings; retain one controlled accent */
+.hero:before{opacity:.24!important;transform:scale(.88)!important}
+.hero:after{opacity:.18!important;transform:scale(.84)!important}
+.hero-portrait:before{
+  width:88%!important;
+  border:1px solid rgba(225,177,88,.38)!important;
+  box-shadow:0 0 0 26px rgba(225,177,88,.035),0 0 0 52px rgba(225,177,88,.025)!important;
+}
+.hero-grid{
+  grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr)!important;
+  gap:clamp(52px,6vw,88px)!important;
+  align-items:center!important;
+  padding-top:66px!important;
+  padding-bottom:48px!important;
+}
+.hero-copy{
+  max-width:650px!important;
+  min-width:0;
+  z-index:4!important;
+}
+.hero h1{
+  max-width:650px!important;
+  font-size:clamp(48px,5.1vw,72px)!important;
+  line-height:1.06!important;
+  letter-spacing:-.055em!important;
+  margin:24px 0 24px!important;
+}
+.hero h1 .hero-line{white-space:normal!important}
+.hero-intro{
+  max-width:540px!important;
+  font-size:16px!important;
+  line-height:1.85!important;
+}
+.hero-actions{margin-top:30px!important;gap:20px!important}
+.hero-proof{
+  max-width:630px!important;
+  margin-top:46px!important;
+  gap:0!important;
+}
+.hero-proof>div{padding:0 14px!important;gap:12px!important}
+.hero-proof strong{font-size:11px!important}
+.hero-proof small{font-size:10px!important}
+.hero-portrait{
+  width:min(100%,455px)!important;
+  max-width:455px!important;
+  height:auto!important;
+  aspect-ratio:760/977;
+  justify-self:end!important;
+  align-self:end!important;
+  margin:0!important;
+  overflow:visible!important;
+}
+.hero-portrait img{
+  width:100%!important;
+  height:100%!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  /* Keep the face and shoulders crisp; feather only the silhouette edges and lower cut */
+  -webkit-mask-image:
+    linear-gradient(to bottom,#000 0%,#000 68%,rgba(0,0,0,.88) 82%,rgba(0,0,0,.38) 94%,transparent 100%),
+    linear-gradient(to right,transparent 0%,#000 7%,#000 93%,transparent 100%)!important;
+  mask-image:
+    linear-gradient(to bottom,#000 0%,#000 68%,rgba(0,0,0,.88) 82%,rgba(0,0,0,.38) 94%,transparent 100%),
+    linear-gradient(to right,transparent 0%,#000 7%,#000 93%,transparent 100%)!important;
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+  filter:drop-shadow(0 14px 26px rgba(0,0,0,.2))!important;
+}
+.hero-portrait:after{height:30%!important;opacity:.72}
+.hero-topline{font-size:10px!important;letter-spacing:.15em!important}
+.hero-bottom{font-size:10px!important}
+
+/* Keep desktop composition balanced at common laptop widths */
+@media(min-width:801px) and (max-width:1100px){
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(285px,.95fr)!important;gap:34px!important}
+  .hero h1{font-size:clamp(44px,5vw,58px)!important}
+  .hero-portrait{max-width:390px!important}
+  .hero-intro{font-size:15px!important}
+  .hero-proof{margin-top:34px!important}
+  .hero-proof>div{padding:0 9px!important;gap:8px!important}
+  .hero-proof strong{font-size:10px!important}
+  .hero-proof small{font-size:9px!important}
+}
+@media(max-width:800px){
+  .site-header{position:relative!important;min-height:70px}
+  .hero-grid{grid-template-columns:1fr!important;gap:30px!important;padding:48px 0 32px!important}
+  .hero-copy{max-width:100%!important}
+  .hero h1{font-size:clamp(42px,8vw,62px)!important;line-height:1.07!important}
+  .hero-intro{max-width:620px!important;font-size:15px!important}
+  .hero-portrait{width:min(100%,420px)!important;max-width:420px!important;margin:0 auto!important;justify-self:center!important}
+  .hero-proof{margin-top:34px!important}
+  .hero-portrait:after{height:22%!important}
+}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(36px,9vw,46px)!important}
+  .hero-intro{font-size:14px!important}
+  .hero-topline{font-size:8px!important}
+  .hero-proof strong{font-size:11px!important}
+  .hero-proof small{font-size:10px!important}
+}
