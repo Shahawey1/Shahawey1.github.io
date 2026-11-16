@@ -928,3 +928,20 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
   display:none!important;
   content:none!important;
 }
+
+
+/* Definitive CV hover cleanup: remove both native and decorative underline layers */
+a.underlined-link:hover,
+a.underlined-link:focus-visible{
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+  border-bottom-color:transparent!important;
+  box-shadow:none!important;
+  background-image:none!important;
+}
+a.underlined-link::before,
+a.underlined-link::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
