@@ -916,3 +916,15 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
   transform:scaleX(1)!important;
   transform-origin:left!important;
 }
+
+
+/* CV download link: prevent duplicate hover underline */
+.underlined-link:hover,
+.underlined-link:focus-visible{
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
+.underlined-link::after{
+  display:none!important;
+  content:none!important;
+}
