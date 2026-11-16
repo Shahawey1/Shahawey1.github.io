@@ -1,19 +1,22 @@
 # Ahmed Elshahawey — Professional Portfolio
 
-A responsive, editorial-style personal portfolio built with static HTML, CSS and JavaScript.
+A responsive, multi-page professional portfolio built with static HTML, CSS and JavaScript.
 
-## Files
-- `index.html` — portfolio content and structure
-- `styles.css` — visual design and responsive layout
-- `script.js` — scroll reveal and mobile navigation
-- `assets/Ahmed-Elshahawey-CV.pdf` — downloadable CV (if included)
+## Pages
+- `index.html` — Home / portfolio overview
+- `about.html` — Professional profile and education
+- `experience.html` — Career history
+- `expertise.html` — Core HR and talent disciplines
+- `work.html` — Selected professional work
+- `impact.html` — Business impact and measurement approach
+- `contact.html` — Contact details
 
-## Publish with GitHub Pages
-1. Create a repository named `YOUR-USERNAME.github.io`.
-2. Upload the contents of this folder to the repository root (not the folder itself).
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then Save.
-6. Wait for GitHub Pages deployment and open `https://YOUR-USERNAME.github.io`.
+## Shared assets
+- `styles.css` — Shared design system, responsive layout and animations
+- `script.js` — Shared interactions and navigation behavior
+- `assets/` — Portrait and supporting assets
 
-The site is static and does not require a build step.
+## Publish
+The site is deployed with GitHub Pages from the `main` branch and repository root. No build step is required.
+
+Live site: https://shahawey1.github.io/
