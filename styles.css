@@ -2,3 +2,19 @@
 @media(max-width:800px){.section-wrap{padding-left:7vw;padding-right:7vw}.site-header{height:70px;padding:0 7vw}.nav{display:none;position:absolute;top:70px;left:0;right:0;background:#f1eee5;padding:25px 7vw;flex-direction:column;align-items:flex-start;gap:20px;border-bottom:1px solid #d2cec2}.nav.open{display:flex}.menu-toggle{display:flex;flex-direction:column;gap:6px;padding:10px}.menu-toggle span{width:23px;height:1px;background:#202d28}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding:60px 0 45px}.hero h1{font-size:clamp(55px,13vw,85px)}.hero-art{height:330px;max-width:520px}.hero-topline,.hero-bottom{font-size:8px}.intro,.expertise,.education{padding-top:80px;padding-bottom:80px}.intro-grid,.education-grid{grid-template-columns:1fr;gap:35px;padding:50px 0}.stat-strip{grid-template-columns:repeat(2,1fr);row-gap:25px}.stat-strip div:nth-child(3){padding-left:0;border-left:0}.experience,.work{padding-top:80px;padding-bottom:85px}.section-heading-row{display:block;padding:50px 0 35px}.section-heading-row>p{margin-top:22px}.timeline-item{grid-template-columns:1fr;gap:10px;padding:25px 0}.timeline-date{font-size:8px}.expertise h2{padding:50px 0 35px}.expertise-grid{grid-template-columns:1fr 1fr}.expertise-card{min-height:210px;padding:20px}.expertise-card h3{font-size:21px}.work-item{grid-template-columns:32px 1fr 20px;gap:12px}.work-item h3{font-size:23px}.contact{padding-top:75px}.contact-inner{padding-bottom:60px}.contact-meta{flex-wrap:wrap}.footer{padding:0 7vw}}
 @media(max-width:480px){.hero-topline span:last-child{display:none}.hero-bottom .scroll-note{display:none}.hero-actions{gap:18px;flex-wrap:wrap}.expertise-grid{grid-template-columns:1fr}.expertise-card{min-height:180px}.stat-strip strong{font-size:33px}.contact h2{font-size:58px}.footer{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+
+
+/* Case studies — phase 2 */
+.case-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.case-card{border:1px solid #59645c;padding:30px 34px 28px;display:grid;grid-template-columns:1fr 1fr;column-gap:6vw;row-gap:18px;transition:background .25s,border-color .25s}
+.case-card:hover{background:#263a32;border-color:#8b927e}
+.case-top{grid-column:1/-1;display:flex;justify-content:space-between;gap:18px;color:#c5a77f;font-size:9px;letter-spacing:.13em;font-weight:700}
+.case-card h3{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(27px,3vw,38px);line-height:1.18;letter-spacing:-.03em;margin:0;max-width:560px}
+.case-lead{font-size:12px;line-height:1.9;color:#c3c8bd;margin:0;max-width:540px}
+.case-detail{border-top:1px solid #59645c;padding-top:13px}
+.case-detail>span,.case-value>span{font-size:9px;letter-spacing:.14em;color:#c5a77f;font-weight:700}
+.case-detail p,.case-value p{font-size:11px;line-height:1.85;color:#b9bdb2;margin:8px 0 0}
+.case-value{grid-column:1/-1;background:rgba(197,167,127,.08);padding:15px 18px}
+.case-value p{font-size:12px;color:#e1e2d8}
+.case-note{font-size:10px;line-height:1.8;color:#aeb5a9;margin:22px 0 0}
+@media(max-width:800px){.case-card{grid-template-columns:1fr;padding:24px 20px;row-gap:15px}.case-top{flex-direction:column;gap:5px}.case-value{grid-column:auto}}
