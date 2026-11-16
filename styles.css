@@ -379,3 +379,69 @@ body{background:var(--navy-950);color:var(--ivory);font-size:15px;line-height:1.
 }
 /* avoid reveal animation hiding the main hero content */
 .hero .hero-topline,.hero .hero-copy{opacity:1;transform:none}
+
+
+/* HERO refinement — clear text/photo separation and aligned content */
+.hero-grid{
+  grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);
+  column-gap:clamp(42px,6vw,96px);
+  align-items:center;
+}
+.hero-copy{
+  width:100%;
+  max-width:680px;
+  min-width:0;
+  justify-self:start;
+}
+.hero h1{
+  max-width:100%;
+  font-size:clamp(46px,5.35vw,78px);
+  line-height:1.045;
+  letter-spacing:-.058em;
+  margin:24px 0 22px;
+}
+.hero h1 .hero-line{display:block}
+.hero-intro{
+  max-width:560px;
+  margin-right:24px;
+  font-size:15px;
+  line-height:1.8;
+}
+.hero-actions{margin-top:30px;gap:22px}
+.hero-proof{
+  width:100%;
+  max-width:630px;
+  margin-top:52px;
+}
+.hero-proof>div{gap:10px;padding-left:14px;padding-right:14px}
+.hero-proof strong{font-size:10px}
+.hero-proof small{font-size:9px}
+.hero-portrait{
+  width:min(100%,490px)!important;
+  max-width:490px!important;
+  justify-self:end;
+  margin:0 -0.5vw -24px 0;
+}
+@media(min-width:901px){
+  .hero-grid{grid-template-columns:minmax(0,1.04fr) minmax(320px,.96fr)}
+  .hero-copy{max-width:660px}
+  .hero h1{font-size:clamp(46px,5.15vw,74px)}
+}
+@media(min-width:901px) and (max-width:1180px){
+  .hero-grid{column-gap:38px;grid-template-columns:minmax(0,1.05fr) minmax(285px,.95fr)}
+  .hero h1{font-size:clamp(43px,4.9vw,58px)}
+  .hero-proof{margin-top:38px}
+}
+@media(max-width:900px){
+  .hero-grid{gap:34px;padding-top:52px;padding-bottom:34px}
+  .hero-copy{max-width:700px}
+  .hero h1{font-size:clamp(42px,7.2vw,62px);line-height:1.05}
+  .hero-intro{max-width:620px;margin-right:0}
+  .hero-proof{margin-top:38px}
+  .hero-portrait{margin:0 auto -16px!important}
+}
+@media(max-width:560px){
+  .hero h1{font-size:clamp(37px,9.1vw,49px);line-height:1.07}
+  .hero-intro{font-size:13px}
+  .hero-actions{margin-top:24px}
+}
