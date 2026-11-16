@@ -897,3 +897,22 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
    max-width: 17ch;
  }
 }
+
+
+/* NAV UNDERLINE FIX: use the animated pseudo-element only; suppress browser text underline */
+.nav a:hover,
+.nav a:focus-visible{
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+}
+.nav a:not(.nav-contact)::after{
+  margin:0!important;
+}
+.nav a.active:not(.nav-contact)::after{
+  content:""!important;
+  display:block!important;
+  height:1px!important;
+  background:currentColor!important;
+  transform:scaleX(1)!important;
+  transform-origin:left!important;
+}
