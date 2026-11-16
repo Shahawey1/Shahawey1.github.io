@@ -849,3 +849,21 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
 .project-association span{color:var(--gold,#d6a84f);font-size:15px}
 .projects-note{font-size:11px;color:#8997a5;margin-top:25px}
 @media(max-width:760px){.projects-page{padding-top:54px;padding-bottom:76px}.projects-grid{grid-template-columns:1fr}.project-card{padding:24px 22px}.projects-page .section-heading-row{margin-bottom:28px}}
+
+/* RECOMMENDATIONS PAGE */
+.recommendations-page{padding-top:76px;padding-bottom:112px}
+.recommendations-page .section-heading-row{margin-bottom:42px}
+.recommendations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.recommendation-card{position:relative;min-width:0;padding:30px 30px 26px;border:1px solid rgba(226,190,119,.24);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-radius:3px;display:flex;flex-direction:column;transition:transform .3s ease,border-color .3s ease,background .3s ease}
+.recommendation-card:hover{transform:translateY(-5px);border-color:rgba(226,190,119,.62);background:rgba(226,190,119,.045)}
+.recommendation-mark{font-family:"Playfair Display",serif;color:var(--gold,#d6a84f);font-size:64px;line-height:.7;margin-bottom:20px}
+.recommendation-card blockquote{margin:0;color:#e1e5e8;font-size:14px;line-height:1.85}
+.recommendation-author{display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(226,190,119,.2);padding-top:18px;margin-top:26px}
+.recommendation-author strong{font-size:14px;color:#f3f0e8}
+.recommendation-author span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold,#d6a84f)}
+.recommendations-source{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:32px;padding:18px 0;border-top:1px solid rgba(226,190,119,.2);border-bottom:1px solid rgba(226,190,119,.2)}
+.recommendations-source>span{font-size:10px;letter-spacing:.14em;font-weight:700;color:var(--muted,#aab5bf)}
+.recommendations-source a{color:var(--gold,#d6a84f);font-size:13px;transition:opacity .25s ease}
+.recommendations-source a:hover{opacity:.7}
+.recommendations-note{font-size:11px;line-height:1.7;color:#8997a5;margin-top:18px}
+@media(max-width:760px){.recommendations-page{padding-top:54px;padding-bottom:76px}.recommendations-grid{grid-template-columns:1fr}.recommendation-card{padding:25px 22px}.recommendations-source{align-items:flex-start;flex-direction:column;gap:8px}}
