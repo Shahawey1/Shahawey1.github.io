@@ -8,6 +8,7 @@ A responsive, multi-page professional portfolio built with static HTML, CSS and 
 - `experience.html` — Career history
 - `expertise.html` — Core HR and talent disciplines
 - `work.html` — Selected professional work
+- `projects.html` — USAID and training projects
 - `impact.html` — Business impact and measurement approach
 - `contact.html` — Contact details
 
