@@ -40,3 +40,14 @@
 .hero-portrait:after{content:"";position:absolute;inset:0;border:1px solid rgba(32,45,40,.18);pointer-events:none}
 @media(max-width:800px){.hero-portrait{height:360px;max-width:520px;justify-self:start}}
 @media(max-width:480px){.hero-portrait{height:310px}}
+
+/* Hero headline: keep the approved message on exactly two lines */
+.hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:3vw}
+.hero-copy{min-width:0}
+.hero h1{font-size:clamp(42px,5.1vw,76px);letter-spacing:-.06em}
+.hero h1 .hero-line{display:block;white-space:nowrap}
+@media(max-width:800px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero h1{font-size:clamp(34px,8vw,56px)}
+  .hero-portrait{justify-self:start}
+}
