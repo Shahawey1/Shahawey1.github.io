@@ -771,3 +771,20 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
 @media(max-width:480px){
   .hero h1{font-size:clamp(34px,8.5vw,43px)!important}
 }
+
+
+/* Requested final hero adjustment: remove the lower semicircle and enlarge portrait by 10% */
+.hero:after{
+  display:none!important;
+  content:none!important;
+}
+.hero-portrait{
+  width:min(100%,429px)!important;
+  max-width:429px!important;
+}
+@media(min-width:801px){
+  .hero-portrait{width:min(100%,429px)!important;max-width:429px!important}
+}
+@media(max-width:800px){
+  .hero-portrait{width:min(100%,418px)!important;max-width:418px!important}
+}
