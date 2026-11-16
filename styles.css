@@ -827,3 +827,25 @@ a:not(.button):not(.brand):not(.nav-contact):hover{color:var(--gold-300,#e6bd70)
  .directory-grid{grid-template-columns:1fr}
  .directory-card{padding:20px 2px;grid-template-columns:36px 1fr 24px}
 }
+
+/* PROJECTS PAGE */
+.projects-page{padding-top:76px;padding-bottom:112px}
+.projects-page .section-heading-row{margin-bottom:42px}
+.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.project-card{
+ min-width:0;padding:28px 30px 24px;border:1px solid rgba(226,190,119,.24);
+ background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+ border-radius:3px;display:flex;flex-direction:column;transition:transform .3s ease,border-color .3s ease,background .3s ease
+}
+.project-card:hover{transform:translateY(-5px);border-color:rgba(226,190,119,.62);background:rgba(226,190,119,.045)}
+.project-card-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--gold,#d6a84f);font-size:10px;letter-spacing:.12em;font-weight:700}
+.project-card h3{font-family:"Playfair Display",serif;font-size:clamp(22px,2.2vw,29px);line-height:1.16;font-weight:500;letter-spacing:-.025em;margin:26px 0 15px;color:#f3f0e8}
+.project-description{color:var(--muted,#bdc7d0);font-size:14px;line-height:1.75;margin:0 0 22px}
+.project-skills{display:flex;align-items:flex-start;gap:10px;padding-top:17px;border-top:1px solid rgba(226,190,119,.18);margin-top:auto}
+.project-gem{color:var(--gold,#d6a84f);font-size:21px;line-height:1}
+.project-skills p{font-size:13px;line-height:1.55;margin:0;color:#d8dce0}
+.project-skills strong{color:#f3f0e8;font-weight:600}
+.project-association{display:flex;align-items:center;gap:9px;margin-top:18px;color:#aeb9c4;font-size:12px}
+.project-association span{color:var(--gold,#d6a84f);font-size:15px}
+.projects-note{font-size:11px;color:#8997a5;margin-top:25px}
+@media(max-width:760px){.projects-page{padding-top:54px;padding-bottom:76px}.projects-grid{grid-template-columns:1fr}.project-card{padding:24px 22px}.projects-page .section-heading-row{margin-bottom:28px}}
