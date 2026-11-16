@@ -608,3 +608,58 @@ html{scroll-padding-top:18px}
   .hero-proof strong{font-size:11px!important}
   .hero-proof small{font-size:10px!important}
 }
+
+
+/* FINAL REFINEMENT: keep decorative rings behind the portrait column only */
+.hero:before{
+  width:min(56vw,690px)!important;
+  right:-9%!important;
+  top:17%!important;
+  opacity:.16!important;
+  border-color:rgba(214,168,79,.42)!important;
+  box-shadow:none!important;
+}
+.hero:after{
+  width:min(38vw,470px)!important;
+  right:2%!important;
+  bottom:-34%!important;
+  opacity:.12!important;
+  border-color:rgba(214,168,79,.16)!important;
+}
+.hero-portrait{
+  width:min(100%,390px)!important;
+  max-width:390px!important;
+  margin:0 12px 34px 0!important;
+  transform:translateY(-8px)!important;
+}
+.hero-portrait:before{
+  width:78%!important;
+  right:2%!important;
+  top:9%!important;
+  box-shadow:0 0 0 18px rgba(225,177,88,.025)!important;
+  border-color:rgba(225,177,88,.32)!important;
+}
+.hero-grid{
+  padding-bottom:24px!important;
+}
+.hero-bottom{
+  position:relative!important;
+  z-index:3!important;
+  margin-top:0!important;
+}
+@media(min-width:801px) and (max-width:1100px){
+  .hero:before{width:58vw!important;right:-15%!important;top:18%!important}
+  .hero:after{width:40vw!important;right:-1%!important;bottom:-30%!important}
+  .hero-portrait{width:min(100%,350px)!important;max-width:350px!important;margin:0 4px 30px 0!important}
+}
+@media(max-width:800px){
+  .hero:before{width:78vw!important;max-width:520px!important;right:-18%!important;top:43%!important}
+  .hero:after{width:58vw!important;right:-8%!important;bottom:-18%!important}
+  .hero-portrait{width:min(100%,380px)!important;max-width:380px!important;margin:0 auto 26px!important;transform:none!important}
+  .hero-portrait:before{width:82%!important;right:0!important;top:8%!important}
+}
+@media(max-width:480px){
+  .hero:before{width:96vw!important;right:-35%!important;top:48%!important}
+  .hero:after{width:72vw!important;right:-20%!important;bottom:-12%!important}
+  .hero-portrait{margin-bottom:22px!important}
+}
