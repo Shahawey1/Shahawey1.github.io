@@ -445,3 +445,53 @@ body{background:var(--navy-950);color:var(--ivory);font-size:15px;line-height:1.
   .hero-intro{font-size:13px}
   .hero-actions{margin-top:24px}
 }
+
+
+/* Seamless portrait-to-background blend: soften the lower image edge */
+.hero-portrait{
+  position:relative;
+  isolation:isolate;
+}
+.hero-portrait img{
+  -webkit-mask-image:linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 76%,
+    rgba(0,0,0,.92) 83%,
+    rgba(0,0,0,.55) 91%,
+    transparent 100%
+  )!important;
+  mask-image:linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 76%,
+    rgba(0,0,0,.92) 83%,
+    rgba(0,0,0,.55) 91%,
+    transparent 100%
+  )!important;
+  filter:drop-shadow(0 18px 30px rgba(0,0,0,.22))!important;
+}
+.hero-portrait:after{
+  content:"";
+  display:block!important;
+  position:absolute;
+  z-index:3;
+  left:-2%;
+  right:-2%;
+  bottom:-1px;
+  height:17%;
+  pointer-events:none;
+  background:linear-gradient(
+    to bottom,
+    rgba(7,21,34,0) 0%,
+    rgba(7,21,34,.22) 48%,
+    rgba(7,21,34,.78) 100%
+  );
+}
+@media(max-width:900px){
+  .hero-portrait img{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 84%,rgba(0,0,0,.7) 94%,transparent 100%)!important;
+    mask-image:linear-gradient(to bottom,#000 0%,#000 84%,rgba(0,0,0,.7) 94%,transparent 100%)!important;
+  }
+  .hero-portrait:after{height:12%}
+}
